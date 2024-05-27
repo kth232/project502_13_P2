@@ -1,8 +1,8 @@
 package org.choongang.global;
 
 import org.choongang.global.contents.Menu;
+import org.choongang.main.MainRouter;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public abstract class AbstractController implements Controller {
@@ -15,7 +15,8 @@ public abstract class AbstractController implements Controller {
      * 상단 공통 출력 부분
      */
     public void common() {
-        
+        System.out.println("학생관리 프로그램 ver1.0");
+        System.out.println("------------------------");
     }
 
     /**
@@ -35,6 +36,7 @@ public abstract class AbstractController implements Controller {
             int m = Integer.parseInt(menu);
             change(m); //라우터를 통해 메뉴 변경
         } catch (Exception e) {
+            //e.printStackTrace();
             System.out.println("메뉴는 [숫자]로 입력해주세요!");
         }
     }
@@ -49,10 +51,11 @@ public abstract class AbstractController implements Controller {
     private void change(int menuNo) {
         Menu menu = null;
         switch (menuNo) {
-            case 1: menu = Menu.JOIN; break; //회원가입, 줄개행 없이 break문 가능
+            case 1: menu = Menu.JOIN; break; //회원가입, 간단한 조건절일 경우 줄개행 없이 break문 가능
             case 2: menu = Menu.LOGIN; break; //로그인
             default: menu = Menu.MAIN; //메인 화면
         }
-        //메뉴 컨트롤러 변경 처리-Router
+        //메뉴 컨트롤러 변경 처리-Router/싱글톤 패턴으로 자원 절약
+        MainRouter.getInstance().change(menu);
     }
 }
