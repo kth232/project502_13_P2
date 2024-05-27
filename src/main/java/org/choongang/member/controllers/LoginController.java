@@ -1,6 +1,8 @@
 package org.choongang.member.controllers;
 
 import org.choongang.global.AbstractController;
+import org.choongang.global.contents.Menu;
+import org.choongang.template.Templates;
 
 /**
  * 로그인 컨트롤러
@@ -8,6 +10,6 @@ import org.choongang.global.AbstractController;
 public class LoginController extends AbstractController {
     @Override
     public void show() {
-        System.out.println("login");
+        Templates.getInstance().render(Menu.LOGIN);
     }
 }

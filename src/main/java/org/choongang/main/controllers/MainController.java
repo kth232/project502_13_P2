@@ -1,6 +1,8 @@
 package org.choongang.main.controllers;
 
 import org.choongang.global.AbstractController;
+import org.choongang.global.contents.Menu;
+import org.choongang.template.Templates;
 
 /**
  * 메인 컨트롤러
@@ -8,10 +10,6 @@ import org.choongang.global.AbstractController;
 public class MainController extends AbstractController {
     @Override
     public void show() {
-        System.out.println("MAIN MENU");
-        System.out.println("1. 회원가입");
-        System.out.println("2. 로그인");
-        System.out.println("----------------");
-        System.out.println("▼ 원하시는 메뉴 번호를 입력해주세요.");
+        Templates.getInstance().render(Menu.MAIN);
     }
 }
