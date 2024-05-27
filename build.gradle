@@ -1,9 +1,12 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'org.choonang'
 version = '1.0-SNAPSHOT'
+
+mainClassName = 'org.choongang.Application'
 
 repositories {
     mavenCentral()
@@ -24,4 +27,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+task.jar {
+    manifest.attributes['Main-Class']='org.choongang.Application'
+    // 배포 시 해당 경로가 메인
 }
