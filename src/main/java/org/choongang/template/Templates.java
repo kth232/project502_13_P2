@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class Templates {
     private static Templates instance;
+
     private Map<Menu, Template> tpls;
 
     private Templates() {
@@ -26,6 +27,7 @@ public class Templates {
     public void render(Menu menu) {
         System.out.println(find(menu).getTpl()); //각 메뉴마다 해당 tpl 가져옴
     }
+
     public Template find(Menu menu) {
         Template tpl = tpls.get(menu);
         if (tpl != null) {
@@ -43,6 +45,7 @@ public class Templates {
     public String Line() { //라인
         return "------------------------\n";
     }
+
     public String doubleLine() {
         return "========================\n";
     }
