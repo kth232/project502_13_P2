@@ -9,6 +9,7 @@ public class MainTpl implements Template {
         sb.append("MAIN MENU\n")
             .append("1. SIGN UP\n")
             .append("2. LOGIN\n")
+            .append("3. 게임하기\n")
             .append("-----------------\n");
         
         return sb.toString();
