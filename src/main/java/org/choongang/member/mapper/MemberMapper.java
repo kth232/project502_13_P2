@@ -14,4 +14,4 @@ public interface MemberMapper {
     int register(Member member);
     int modify(Member member);
     int delete(String userId);
-}
+} //SQL 매핑 추상 메서드 추가

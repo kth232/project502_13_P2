@@ -25,4 +25,5 @@
         <mapper resource="org/choongang/member/mapper/MemberMapper.xml" />
         <mapper resource="org/choongang/game/mapper/PointLogMapper.xml" />
     </mappers>
+    <!--동일한 경로, 동일한 파일명으로 Mapper 인터페이스 추가-->
 </configuration>

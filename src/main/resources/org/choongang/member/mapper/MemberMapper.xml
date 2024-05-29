@@ -12,6 +12,7 @@
         <result column="REG_DT" property="regDt" />
         <result column="MOD_DT" property="modDt" />
     </resultMap>
+    <!-- 테이블 컬럼과 엔티티 클래스 멤버변수명과 일치하지 않는 경우 맞춰줌 -->
 
     <!-- 회원 목록 조회 -->
     <select id="getList" resultMap="memberMap">
