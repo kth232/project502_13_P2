@@ -47,6 +47,8 @@ public abstract class AbstractController implements Controller {
      * @param message : 항목 메세지
      * @param predicate : 판별식
      * @return
+     * 함수형 인터페이스, 사용자 정의 기능
+     * 판별식이 앞에 있으면 입력 못 받음->do-while문으로 한번은 입력받도록 해야 함
      */
     protected String promptWithValidation(String message, Predicate<String> predicate) {
         String str = null;

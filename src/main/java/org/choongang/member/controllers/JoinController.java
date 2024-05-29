@@ -33,6 +33,7 @@ public class JoinController extends AbstractController {
 
         String userNm = promptWithValidation("회원명: ", s -> !s.isBlank());
 
+        //DTO 데이터 전달 객체->서비스에게 전달
         RequestJoin form = RequestJoin.builder()
                 .userId(userId)
                 .userPw(userPw)
