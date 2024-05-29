@@ -13,6 +13,12 @@ public class JoinValidator implements Validator<RequestJoin>, RequiredValidator 
         this.mapper = mapper;
     }
 
+    /**
+     * 1. 아이디, 비밀번호 필수 입력 유효성 체크
+     * 2. 아이디로 조회된 회원이 있는지 체크
+     * 3. 조회된 회원 데이터의 비밀번호와 사용자가 입력한 비밀번호 일치 여부 체크(BCrypt 해시 검증)
+     * @param form
+     */
     @Override
     public void check(RequestJoin form) {
         // 필수 항목 체크 S
