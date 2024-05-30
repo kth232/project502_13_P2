@@ -14,6 +14,4 @@ public abstract class AbstractServiceLocator implements ServiceLocator{
     protected AbstractServiceLocator() {
         services = new HashMap<>();
     }
-
-    public abstract Service find(Menu menu);
 }
